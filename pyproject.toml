@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "license-plates"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+numpy = "^1.26.1"
+matplotlib = "^3.8.1"
+torch = { version = "^2.1.0+cpu", source = "torch_cpu" }
+opencv-python-headless = "^4.8.1.78"
+transformers = "^4.35.0"
+pillow = "^10.1.0"
+pytesseract = "^0.3.10"
+
+[[tool.poetry.source]]
+name = "torch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
